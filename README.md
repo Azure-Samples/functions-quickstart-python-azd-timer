@@ -72,9 +72,10 @@ You can initialize a project from this `azd` template in one of these ways:
    docker run -p 10000:10000 -p 10001:10001 -p 10002:10002 mcr.microsoft.com/azure-storage/azurite
    ```
 
-2. From the `timer` folder, run this command to start the Functions host locally:
+2. From the `src` folder, run this command to start the Functions host locally:
 
     ```shell
+    cd src
     func start
     ```
 
@@ -84,8 +85,8 @@ You can initialize a project from this `azd` template in one of these ways:
 
 ## Run your app using Visual Studio Code
 
-1. Open the `timer` app folder in a new terminal.
-2. Run the `code .` code command to open the project in Visual Studio Code.
+1. Open the `src` app folder in a new terminal.
+2. Run the `code .` command to open the project in Visual Studio Code.
 3. In the command palette (F1), type `Azurite: Start`, which enables debugging without warnings.
 4. Press **Run/Debug (F5)** to run in the debugger. Select **Debug anyway** if prompted about local emulator not running.
 5. Wait for the timer schedule to trigger your timer function.
@@ -122,7 +123,7 @@ azd down
 
 ## Source Code
 
-The function code for the timer trigger is defined in [`timer_function.py`](./timer/timer_function.py).
+The function code for the timer trigger is defined in [`src/function_app.py`](./src/function_app.py).
 
 This code shows the timer function implementation:  
 
