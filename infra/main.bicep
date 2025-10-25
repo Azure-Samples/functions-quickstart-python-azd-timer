@@ -119,7 +119,7 @@ module api './app/api.bicep' = {
     identityId: apiUserAssignedIdentity.outputs.resourceId
     identityClientId: apiUserAssignedIdentity.outputs.clientId
     appSettings: {
-      TIMER_SCHEDULE: '30 * * * * *'
+      TIMER_SCHEDULE: '*/30 * * * * *'
     }
     virtualNetworkSubnetId: vnetEnabled ? serviceVirtualNetwork.outputs.appSubnetID : ''
   }

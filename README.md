@@ -64,6 +64,23 @@ You can initialize a project from this `azd` template in one of these ways:
 
     You can also clone the repository from your own fork in GitHub.
 
+## Prepare your local environment
+
+Add a file named `local.settings.json` in the `src` folder with the following contents:
+
+```json
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "FUNCTIONS_WORKER_RUNTIME": "python",
+        "TIMER_SCHEDULE": "*/30 * * * * *"
+    }
+}
+```
+
+The `TIMER_SCHEDULE` setting defines when your timer function runs using NCRONTAB format. The example above runs every 30 seconds. For more information on NCRONTAB expressions, see [Configuration](#configuration).
+
 ## Run your app from the terminal
 
 1. Start Azurite storage emulator in a separate terminal window:
