@@ -34,6 +34,7 @@ This codespace is already configured with the required tools to complete this tu
 
 ## Prerequisites
 
+- [Docker](https://www.docker.com/products/docker-desktop/) - Required to run the [Azurite](https://learn.microsoft.com/azure/storage/common/storage-use-azurite) storage emulator container for local development
 - [Azure Storage Emulator (Azurite)](https://learn.microsoft.com/azure/storage/common/storage-use-azurite) - Required for local development with Azure Functions
 - [Python 3.11](https://www.python.org/downloads/)
 - [Azure Functions Core Tools](https://learn.microsoft.com/azure/azure-functions/functions-run-local?pivots=programming-language-python#install-the-azure-functions-core-tools)
