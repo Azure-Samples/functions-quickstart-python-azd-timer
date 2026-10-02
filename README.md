@@ -110,6 +110,12 @@ The `TIMER_SCHEDULE` setting defines when your timer function runs using NCRONTA
 
 1. Open the `src` app folder in a new terminal.
 2. Run the `code .` command to open the project in Visual Studio Code.
+   You can also open the repository root; its tasks run from `src`. In either
+   workspace, create the environment in `src/.venv` before debugging. From `src`,
+   run `python -m venv .venv` (or `py -m venv .venv` on Windows).
+   If an interpreter was previously selected, run **Python: Select Interpreter**
+   and select this environment. The default interpreter setting is only used
+   when the Python extension first loads a workspace.
 3. In the command palette (F1), type `Azurite: Start`, which enables debugging without warnings.
 4. Press **Run/Debug (F5)** to run in the debugger. Select **Debug anyway** if prompted about local emulator not running.
 5. Wait for the timer schedule to trigger your timer function.
